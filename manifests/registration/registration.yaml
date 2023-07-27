@@ -1,7 +1,7 @@
 apiVersion: elemental.cattle.io/v1beta1
 kind: MachineRegistration
 metadata:
-  name: fire
+  name: elemental
   namespace: fleet-default
 spec:
   config:
