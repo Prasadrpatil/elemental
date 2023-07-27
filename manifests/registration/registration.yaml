@@ -8,7 +8,7 @@ spec:
     cloud-config:
       users:
       - name: root
-        passwd: "$6$/OBpzEc039L4Ovc3$xlXHWOm/LLarJB3mILq2IT9g3zr4aRtN6dB5M/RZfUmuaAPZkmo4L/vrJfvnhRPS23KD1NLB/SpOAErl00ShO/"
+        passwd: "pass"
       write_files:
       - content: |
           OPTION1="yes"
@@ -20,10 +20,8 @@ spec:
     elemental:
       install:
         reboot: true
-        device: /dev/vda
+        device: /dev/sda
         debug: true
         config-dir: /etc/elemental
   machineInventoryLabels:
-    cores: "${System Data/CPU/Total Cores}"
-    memory: "${System Data/Memory/Total Physical Bytes}"
-    registration: fire
+    env: "dev"
