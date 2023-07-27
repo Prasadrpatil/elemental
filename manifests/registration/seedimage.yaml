@@ -17,5 +17,5 @@ spec:
   registrationRef:
     apiVersion: elemental.cattle.io/v1beta1
     kind: MachineRegistration
-    name: fire
+    name: elemental
     namespace: fleet-default
