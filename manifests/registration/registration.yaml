@@ -15,8 +15,8 @@ spec:
           OPTION2="false"
         path: "/etc/myservice.conf"
       runcmd:
-      - mkdir -p /usr/demo/data
-      - mount /dev/disk/by-label/EXTRA_PART /usr/demo/data
+      - mkdir -p /usr/local/data
+      - mount /dev/disk/by-label/EXTRA_PART /usr/local/data
     elemental:
       install:
         reboot: true
