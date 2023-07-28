@@ -1,0 +1,27 @@
+apiVersion: elemental.cattle.io/v1beta1
+kind: MachineRegistration
+metadata:
+  name: elemental
+  namespace: fleet-default
+spec:
+  config:
+    cloud-config:
+      users:
+      - name: root
+        passwd: "pass"
+      write_files:
+      - content: |
+          OPTION1="yes"
+          OPTION2="false"
+        path: "/etc/myservice.conf"
+      # runcmd:
+      # - mkdir -p /usr/local/data
+      # - mount /dev/disk/by-label/EXTRA_PART /usr/local/data
+    elemental:
+      install:
+        reboot: true
+        device: /dev/sda
+        debug: true
+        config-dir: /etc/elemental
+  machineInventoryLabels:
+    env: "dev"
