@@ -11,7 +11,7 @@ spec:
           install:
             extra-partitions:
               - size: 1024
-                fs: ext4
+                fs: swap
                 label: EXTRA_PART
         path: /etc/elemental/config.yaml
   registrationRef:
