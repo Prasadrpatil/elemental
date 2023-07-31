@@ -4,7 +4,7 @@ metadata:
   name: elemental
   namespace: fleet-default
 spec:
-  baseImage: https://updates.suse.com/SUSE/Updates/ElementalTeal/5.3/x86_64/update/iso/elemental-teal.x86_64-1.1.4-Build3.2.30.iso
+  baseImage: https://download.opensuse.org/repositories/isv:/Rancher:/Elemental:/Stable:/Teal53/media/iso/elemental-teal.x86_64.iso
   cloud-config:
     write_files:
       - content: |
