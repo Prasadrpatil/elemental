@@ -9,19 +9,6 @@ spec:
       users:
       - name: root
         passwd: "pass"
-      write_files:
-      - content: |
-          name: "Mount LVM volumes"
-          stages:
-            initramfs:
-              - name: "Extend fstab to mount LVM logical volumes at boot"
-                commands:
-                - |
-                  echo "/dev/sda5	swap	swap		defaults		0 0" >> /etc/fstab
-                  mount -a
-                  mkswap /dev/sda5
-                  swapon /dev/sda5
-        path: /system/oem/99_lvm_volumes_in_fstab.yaml
       # runcmd:
       # - mkdir -p /usr/local/data
       # - mount /dev/disk/by-label/EXTRA_PART /usr/local/data
@@ -31,5 +18,7 @@ spec:
         device: /dev/sda
         debug: true
         config-dir: /etc/elemental
+        config-url: 
+        - "/run/initramfs/live/oem/custom_config.yaml"
   machineInventoryLabels:
     env: "dev"
