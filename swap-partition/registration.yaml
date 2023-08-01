@@ -13,7 +13,8 @@ spec:
       - content: |
           name: "Mount LVM volumes"
           stages:
-            initramfs:
+            # initramfs:
+            fs:
               - name: "Extend fstab to mount LVM logical volumes at boot"
                 commands:
                 - |
