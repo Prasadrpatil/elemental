@@ -14,18 +14,6 @@ spec:
                 fs_type: linux-swap
                 label: EXTRA_PART
         path: /etc/elemental/config.yaml
-      - content: |
-          name: "Mount LVM volumes"
-          stages:
-            initramfs:
-              - name: "Extend fstab to mount LVM logical volumes at boot"
-                commands:
-                - |
-                  echo "/dev/sda5	swap	swap		defaults		0 0" >> /etc/fstab
-                  mount -a
-                  mkswap /dev/sda5
-                  swapon /dev/sda5
-        path: /system/oem/99_lvm_volumes_in_fstab.yaml
   registrationRef:
     apiVersion: elemental.cattle.io/v1beta1
     kind: MachineRegistration
