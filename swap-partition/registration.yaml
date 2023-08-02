@@ -9,9 +9,6 @@ spec:
       users:
       - name: root
         passwd: "pass"
-      # runcmd:
-      # - mkdir -p /usr/local/data
-      # - mount /dev/disk/by-label/EXTRA_PART /usr/local/data
     elemental:
       install:
         reboot: true
