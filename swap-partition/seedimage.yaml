@@ -11,7 +11,7 @@ spec:
           install:
             extra-partitions:
               - size: 1024
-                fs: swap
+                fs_type: swap
                 label: EXTRA_PART
         path: /etc/elemental/config.yaml
       - content: |
