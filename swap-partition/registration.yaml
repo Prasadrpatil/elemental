@@ -18,7 +18,6 @@ spec:
         device: /dev/sda
         debug: true
         config-dir: /etc/elemental
-        config-url: 
-        - "/overlay/oem/lvm_volumes_in_fstab.yaml"
+        config-url: "/overlay/oem/lvm_volumes_in_fstab.yaml"
   machineInventoryLabels:
     env: "dev"
